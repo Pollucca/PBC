@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<project name="pbcl" default="jar" basedir=".">
+	
+	<property name="build.src" value="src"></property>
+	<property name="build.dest" value = "bin"></property>
+	<property name="project" value="pbcl"></property>
+	<property name="version" value="1.0"></property>
+	<property name="build.jar" value="${project}-${version}.jar"></property>
+	
+	<target name="jar" depends="compile">
+		<jar 
+			jarfile="${build.jar}"
+			basedir="${build.dest}">
+		</jar>
+	</target>
+	
+	<path id="myclasspath">
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+			
+	<target name="compile">
+		<mkdir dir="${build.dest}" />
+		<javac
+			includeantruntime="false"
+			srcdir="${build.src}"
+			destdir="${build.dest}"
+			classpathref="myclasspath"
+		/>
+	</target>
+			
+	<target name="clean">
+		<delete dir="${build.dest}" />
+		<delete file="${build.jar}" />
+	</target>
+	
+</project>
