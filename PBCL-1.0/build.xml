@@ -15,11 +15,13 @@
 		</jar>
 	</target>
 	
+	<!--
 	<path id="myclasspath">
 		<fileset dir="lib">
 			<include name="*.jar" />
 		</fileset>
 	</path>
+	-->
 			
 	<target name="compile">
 		<mkdir dir="${build.dest}" />
@@ -28,6 +30,7 @@
 			srcdir="${build.src}"
 			destdir="${build.dest}"
 			classpathref="myclasspath"
+			excludes="**/*Test.java"
 		/>
 	</target>
 			
