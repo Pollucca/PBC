@@ -14,14 +14,6 @@
 			basedir="${build.dest}">
 		</jar>
 	</target>
-	
-	<!--
-	<path id="myclasspath">
-		<fileset dir="lib">
-			<include name="*.jar" />
-		</fileset>
-	</path>
-	-->
 			
 	<target name="compile">
 		<mkdir dir="${build.dest}" />
@@ -29,7 +21,7 @@
 			includeantruntime="false"
 			srcdir="${build.src}"
 			destdir="${build.dest}"
-			classpathref="myclasspath"
+			classpathref=""
 			excludes="**/*Test.java"
 		/>
 	</target>
