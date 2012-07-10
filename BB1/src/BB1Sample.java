@@ -9,8 +9,6 @@ import BB1.BB1_Plaintext;
 
 public class BB1Sample 
 {	
-	String parameter = "params/m.param";
-	
 	public static void main(String[] args) throws IOException 
 	{
 		BB1Sample bb1sample = new BB1Sample();
@@ -31,7 +29,7 @@ public class BB1Sample
 	{
 		System.out.println("---BB1 generate master key---");
 		
-		BB1 bb1 = new BB1(parameter);
+		BB1 bb1 = new BB1("fp160od");
 		
 		BB1_MSK msk = bb1.gen_msk();
 		BB1_MPK mpk = bb1.gen_mpk(msk);
@@ -47,7 +45,7 @@ public class BB1Sample
 	{
 		System.out.println("---BB1 generate client key---");
 		
-		BB1 bb1 = new BB1(parameter);
+		BB1 bb1 = new BB1("fp160od");
 
 		BB1_MSK msk = new BB1_MSK("bb1/msk.param");
 		BB1_MPK mpk = new BB1_MPK("bb1/mpk.param");
@@ -64,7 +62,7 @@ public class BB1Sample
 	{
 		System.out.println("---BB1 encrypt---");
 		
-		BB1 bb1 = new BB1(parameter);
+		BB1 bb1 = new BB1("fp160od");
 		
 		BB1_MPK mpk = new BB1_MPK("bb1/mpk.param");
 		
@@ -86,7 +84,7 @@ public class BB1Sample
 	{
 		System.out.println("---BB1 decrypt---");
 		
-		BB1 bb1 = new BB1(parameter);
+		BB1 bb1 = new BB1("fp160od");
 
 		BB1_MPK mpk = new BB1_MPK("bb1/mpk.param");
 
@@ -110,7 +108,7 @@ public class BB1Sample
 		
 		long t0, t1, loop = 10;
 		
-		BB1 bb1 = new BB1(parameter);
+		BB1 bb1 = new BB1("fp160od");
 			
 		BB1_MSK msk = new BB1_MSK("bb1/msk.param");
 		BB1_MPK mpk = new BB1_MPK("bb1/mpk.param");
