@@ -21,7 +21,6 @@
 			includeantruntime="false"
 			srcdir="${build.src}"
 			destdir="${build.dest}"
-			classpathref=""
 			excludes="**/*Test.java"
 		/>
 	</target>
