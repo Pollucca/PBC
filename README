@@ -1,3 +1,22 @@
 -----------------------------------------
  Pairing Based Cryptography
 -----------------------------------------
+
+[Description]
+
+PBCL : Library of pairing computation on elliptic curve
+BB1  : Sample program of identity based encryption with PBCL
+
+[command memo]
+
+$ git clone git://github.com/Pollucca/PBC.git
+$ cd PBC/PBCL
+$ ant
+$ cd ../BB1
+$ mkdir bb1; mkdir lib
+$ cp ../PBCL/pbcl-x.x.jar lib/
+$ ant
+$ java -jar bb1-x.x.jar
+
+
+ 
